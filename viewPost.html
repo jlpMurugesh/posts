@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Posts</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px 0;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .edit-btn {
+            background-color: #28a745;
+            padding: 5px 8px;
+            margin: 0 2px;
+            font-size: 12px;
+            border-radius: 3px;
+        }
+        .edit-btn:hover {
+            background-color: #218838;
+        }
+        .delete-btn {
+            background-color: #dc3545;
+            padding: 5px 8px;
+            margin: 0 2px;
+            font-size: 12px;
+            border-radius: 3px;
+        }
+        .delete-btn:hover {
+            background-color: #c82333;
+        }
+        .action-column {
+            width: 100px;
+            text-align: center;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <!-- Changed to type="module" -->
+    <script type="module" src="script.js"></script>
+    
+    <h2>All Posts</h2>
+    
+    <button onclick="goToCreatePost()">Add New Post</button>
+    
+    <table id="postsTable">
+        <thead>
+            <tr>
+                <th class="action-column">Actions</th>
+                <th>ID</th>
+                <th>Title</th>
+            </tr>
+        </thead>
+        <tbody id="postsTableBody">
+            <!-- Posts will be dynamically added here -->
+        </tbody>
+    </table>
+
+    <!-- Removed the inline script since DOMContentLoaded is handled in script.js -->
+</body>
+</html>

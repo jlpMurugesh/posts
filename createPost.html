@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <!-- Changed to type="module" -->
+    <script type="module" src="script.js"></script>
+    
+    <h2>Create New Post</h2>
+    
+    <h3>ID:</h3>
+    <input id="postId" placeholder="Enter unique ID" type="number">
+
+    <h3>Title:</h3>
+    <input id="postTitle" placeholder="Enter post title" type="text">
+    <br><br>
+    
+    <button onclick="savePost()">Save</button>
+    <button onclick="goToViewPost()">Back to Posts</button>
+</body>
+</html>
