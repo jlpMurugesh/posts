@@ -63,16 +63,20 @@ const loadPosts = async () => {
 const savePost = async () => {
     const postId = document.getElementById('postId');
     const postTitle = document.getElementById('postTitle');
+
     if (!postId.value.trim() || !postTitle.value.trim()) {
         alert('Please fill in both ID and Title fields');
         return;
     }
+
     const id = parseInt(postId.value);
     const title = postTitle.value.trim();
+
     if (posts.find(post => post.id === id)) {
         alert('Post with this ID already exists!');
         return;
     }
+    
     try {
         await axios.put(`${BASE_URL}/${id}.json`, JSON.stringify(title));
         postId.value = '';
